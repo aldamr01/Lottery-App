@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Halaman Utama</title>
+</head>
+<body>
+    <ol>
+        {% for fruit in fruits %}
+            {% if fruit == 'Apel' %}
+                <li>Buah {{ fruit }} yang kumiliki berwarna merah!.</li>
+            {# COMMENT
+
+            {% elif fruit == 'Duren' %}
+                <li>Buah {{ fruit }} yang dibeli ayah memiliki kulit luar yang tajam!.</li>
+            
+            END COMMENT #}
+
+            {% endif %}                        
+        {% endfor %}
+    </ol>
+</body>
+</html>
