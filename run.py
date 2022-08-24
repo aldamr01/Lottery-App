@@ -1,5 +1,5 @@
 from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
+# from flask_sqlalchemy import SQLAlchemy
 from flask import render_template
 import os
 from dotenv import load_dotenv
@@ -8,13 +8,13 @@ load_dotenv()
 
 app = Flask(os.getenv('APP_NAME'))
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('SQLALCHEMY_DATABASE_URI')
-db = SQLAlchemy(app)
+# db = SQLAlchemy(app)
 
-class Users(db.Model):
+# class Users(db.Model):
     
-    __tablename__ = 'users'
-    id = db.Column(db.Integer, primary_key=True)
-    email = db.Column(db.String(120), unique=True, nullable=False)
+#     __tablename__ = 'users'
+#     id = db.Column(db.Integer, primary_key=True)
+#     email = db.Column(db.String(120), unique=True, nullable=False)
     
 
 @app.route('/')
