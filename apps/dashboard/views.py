@@ -9,7 +9,7 @@ dashboard_blueprint = Blueprint('Dashboard', __name__, template_folder="template
 def index():
     fruits = ['Apel', 'Jeruk', 'Pisang', 'Duren']    
     
-    return render_template('index.html', fruits=fruits, app_name=GeneralConfig.APP_NAME, ) 
+    return render_template('index.html', fruits=fruits) 
 
 @dashboard_blueprint.route('/halaman_kedua')
 def halaman_kedua():
