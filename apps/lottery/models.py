@@ -23,11 +23,4 @@ class LotteryParticipants(db.Model):
     fullname = db.Column(db.String(255), nullable=False)
     email = db.Column(db.String(100), nullable=False)
     address = db.Column(db.Text(), nullable=False)
-    updated_at = db.Column(db.DateTime, default=datetime.utcnow(), onupdate=datetime.utcnow()) 
-    
-class Xmin(db.Model):
-    
-    __tablename__ = 'xmin'
-    
-    id = db.Column(db.Integer, primary_key=True)    
-    updated_at = db.Column(db.DateTime, default=datetime.utcnow(), onupdate=datetime.utcnow()) 
+    updated_at = db.Column(db.DateTime, default=datetime.utcnow(), onupdate=datetime.utcnow())
