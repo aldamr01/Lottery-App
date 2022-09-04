@@ -6,7 +6,11 @@ from extensions import db, csrf
 from flask import Flask
 from flask_migrate import Migrate
 
-app = Flask(GeneralConfig.APP_NAME, template_folder='apps/templates', static_folder='apps/static')
+app = Flask(
+    GeneralConfig.APP_NAME,
+    template_folder="apps/templates",
+    static_folder="apps/static",
+)
 app.config.from_object(AppConfig)
 
 app.register_blueprint(dashboard_blueprint)
@@ -17,6 +21,5 @@ migrate = Migrate(app, db)
 csrf.init_app(app)
 db.init_app(app)
 
-if __name__ == '__main__':        
+if __name__ == "__main__":
     app.run()
-    
