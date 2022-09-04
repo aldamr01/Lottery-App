@@ -22,24 +22,24 @@
 
 <body>
 	
-	{% include '__header.html' %}
+	{% include '_header.html' %}
 
     <main class="promo-container">
 		        
         {% if not admin_page %}
-            {% include '__banner.html' %}
+            {% include '_banner.html' %}
         {% endif %}
 
 		<div class="container">			 
             <section id="content">
-                {% include '__messages.html' %}
+                {% include '_messages.html' %}
 
                 {% block content %} {% endblock  %}
             </section>
 		</div>
 	</main>
 
-    {% include '__footer.html' %}    
+    {% include '_footer.html' %}    
 
     
     {% block modal %} {% endblock %}
