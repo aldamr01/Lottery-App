@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %} Halaman Utama {% endblock %}
+
+{% block content %} 
+	<section id="content">
+		<h1 class="text-center mt-5 mb-3">Daftar Undian</h1>
+		{% include 'lottery/__table.html' %}
+	</section>     
+{% endblock %}
+
+
+{% block script %}
+	{{ super() }}
+	
+	<script>
+		$(function () {
+			$('[data-toggle="tooltip"]').tooltip()
+		})
+	</script>
+
+	{% include 'lottery/__script-delete.html' %}
+{% endblock %}
+
+
+{% block modal %}
+	{% include 'lottery/__modal-delete.html' %}
+{% endblock %}
+	

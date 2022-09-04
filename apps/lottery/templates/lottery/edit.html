@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% from "__formhelpers.html" import render_field %}
+
+{% block title %} Halaman UtamXa {% endblock %}
+
+{% block content %} 
+
+	<section id="content">
+		<h1 class="text-center mt-5 mb-3">Ubah Undian</h1>
+
+		<div class="row justify-content-md-center">
+			<div class="col-md-6">
+				<form method="POST" action="{{ url_for('lottery.update', id=id)}}">
+					{% include 'lottery/__form.html' %}
+
+					<button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                    <button type="button" class="btn btn-default">Batalkan</button>
+				</form>
+			</div>
+		</div>
+	</section>
+{% endblock %}
+	

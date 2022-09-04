@@ -1,0 +1,16 @@
+{{ form.csrf_token }}
+
+<div class="form-group">
+    <label for="name"><b>{{ form.name.label }}</b></label>
+    {{ form.name(class="form-control") }}
+</div>
+
+<div class="form-group">
+    <label for="name"><b>{{ form.max_participant.label }}</b></label>
+    {{ form.max_participant(class="form-control") }}
+</div>
+
+<div class="form-group">
+    <label for="description"><b>{{ form.description.label }}</b></label>
+    {{ form.description(class="form-control") }}
+</div>

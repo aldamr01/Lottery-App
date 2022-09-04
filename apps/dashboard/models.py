@@ -1,4 +1,4 @@
-from basemodel import db
+from extensions import db
 
 class Xmin2(db.Model):
     

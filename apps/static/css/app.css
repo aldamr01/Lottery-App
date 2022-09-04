@@ -1,0 +1,333 @@
+@media (min-width: 1200px) {
+    .promotion-image {
+        height: 189px;
+    }
+}
+
+@media (min-width: 992px) {
+    .promotion-image {
+        height: 154px;
+    }
+}
+
+@media (min-width: 768px) {
+    .promotion-image {
+        height: 180px;
+    }
+}
+
+@media (min-width: 768px) {
+    .promotion-date {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 10px;
+        height: 55px;
+        overflow: hidden;
+    }
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background: #F8F8F8;
+    font-family: Lato, "Hiragino Maru Gothic Pro", "Meiryo UI", Meiryo, "MS PGothic", sans-serif;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+a {
+    color: #2b546a;
+}
+
+p {
+    margin: 0;
+}
+
+ol,
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+ul,
+li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.table-container {
+    margin-top: 50px;
+}
+
+.btn {
+    border: none !important;
+    border-radius: 0 !important;
+}
+
+.header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* z-index: 9999; */
+    background: #2b546a;
+    height: 50px;
+    padding: 5px 0;
+}
+
+.logo {
+    float: left;
+    margin-top: 8px;
+}
+
+/* Container */
+.promo-container {
+    overflow-x: hidden;
+    min-height: 100%;
+    margin-bottom: -81px;
+    padding-bottom: 100px;
+}
+
+.slider-container {
+    width: 100%;
+    height: 240px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    margin-bottom: 0;
+}
+
+.slider-wrapper,
+.slider-slide,
+.slick-list,
+.slick-track {
+    height: 100%;
+}
+
+.slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    -o-object-fit: cover;
+    -ms-object-fit: cover;
+}
+
+.promotion-box {
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.promotion-image {
+    height: 100%;
+    overflow: hidden;
+}
+
+.img-full {
+    width: 100%;
+    max-width: none;
+}
+
+.promotion-description {
+    border-color: #E0E0E0;
+    border-style: solid;
+    border-width: 0 1px;
+    padding: 18px;
+}
+
+.promotion-box p {
+    height: 50px;
+    overflow: hidden;
+    font-weight: 500;
+}
+
+.promotion-date {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: auto;
+}
+
+
+.promotion-code-detail,
+.promotion-date-detail {
+    position: relative;
+    padding-left: 30px;
+}
+
+.promotion-box-label {
+    font-size: 12px;
+}
+
+.text-secondary {
+    color: rgba(0, 0, 0, 0.54);
+}
+
+.promotion-box__value {
+    font-size: 13px;
+    line-height: 13px;
+}
+
+/* .promotion-date-detail:before {
+    background-image: url(https://ecs7.tokopedia.net/assets/images/ic_periode.png);
+} */
+
+.promotion-code {
+    position: relative;
+    height: 40px;
+}
+
+.promotion-code-detail {
+    display: inline-block;
+}
+
+/* .promotion-code-detail:before {
+    background-image: url(https://ecs7.tokopedia.net/assets/images/ic_kode.png);
+} */
+
+.promotion-date-detail:before,
+.promotion-code-detail:before {
+    position: absolute;
+    content: " ";
+    left: 0;
+    top: 50%;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+}
+
+.sticky-code-voucher__text {
+    color: #FF5722;
+    font-weight: 600;
+    border: none;
+    width: 100%;
+    min-width: 160px;
+    padding: 0;
+}
+
+.promotion-cta {
+    border: 1px solid #E0E0E0;
+    padding: 18px;
+}
+
+.promotion__btn {
+    background: #2b546a;
+    text-align: center;
+    padding: 10px;
+    font-weight: 600;
+    color: #fff !important;
+    border-radius: 4px;
+    border: 1px solid #fff;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    display: block;
+    text-decoration: none !important;
+}
+
+.promotion__btn:hover {
+    background: #224456;
+    text-decoration: none !important;
+}
+
+.footer {
+    padding: 20px 0;
+    background: #FFF;
+    -webkit-box-shadow: 0 -1px 1px rgb(0 0 0 / 5%);
+    -moz-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 -1px 1px rgb(0 0 0 / 5%);
+}
+
+.footer-copyright {
+    padding: 10px;
+}
+
+.footer-connect {
+    padding: 5px;
+}
+
+.footer-connect>ul {
+    margin: 0;
+    padding: 0 10px;
+    display: inline-block;
+}
+
+.footer-connect>ul>li {
+    list-style: none;
+    display: inline-block;
+}
+
+.footer-connect__apps {
+    height: 30px;
+}
+
+.footer-connect__socmed {
+    height: 30px;
+}
+
+.promotion-code__btn {
+    position: absolute;
+    right: 0;
+    margin-top: 4px;
+}
+
+.logo-text {
+    font-weight: 600;
+    color: #F8F8F8;
+    font-size: 13pt;
+}
+
+.divider-white {
+    width: 100%;
+    background: #ffffff;
+    height: 50px;
+}
+
+.header-menus {
+    padding-right: 20px;
+    margin-top: 8px;
+    float: right;
+}
+
+.header-menus li {
+    float: left;
+    font-size: 13pt;
+    color: #ffffff;
+    padding-left: 15px;
+}
+
+.header-menus a {
+    float: left;
+    font-size: 13pt;
+    font-weight: 300;
+    color: #ffffff;
+}
+
+.header-menus a:hover {
+    float: left;
+    font-size: 13pt;
+    font-weight: 300;
+    color: #c4c0c0;
+    text-decoration: none;
+}

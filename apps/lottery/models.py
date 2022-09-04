@@ -1,5 +1,4 @@
-# from flask_sqlalchemy import SQLAlchemy
-from basemodel import db
+from extensions import db
 from datetime import datetime
 
 class Lottery(db.Model):

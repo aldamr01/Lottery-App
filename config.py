@@ -9,6 +9,10 @@ class AppConfig:
     SECRET_KEY = environ.get('SECRET_KEY')
     STATIC_FOLDER = 'static'
     TEMPLATES_FOLDER = 'templates'
+    WTF_CSRF_FIELD_NAME = 'csrf_token'
+    WTF_CSRF_ENABLED = True
+    SESSION_COOKIE_DOMAIN = False
+    SESSION_COOKIE_SECURE = False
     SQLALCHEMY_DATABASE_URI = environ.get('SQLALCHEMY_DATABASE_URI')
     SQLALCHEMY_TRACK_MODIFICATIONS = environ.get('SQLALCHEMY_TRACK_MODIFICATIONS')
     
