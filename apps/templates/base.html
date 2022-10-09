@@ -26,7 +26,7 @@
 
     <main class="base-container">
 		        
-        {% if not admin_page %}
+        {% if not current_user.is_authenticated %}
             {% include '_banner.html' %}
         {% endif %}
 		<div class="container">			 

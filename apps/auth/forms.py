@@ -22,3 +22,8 @@ class RegisterForm(FlaskForm):
     email = EmailField(
         "Email", [validators.Length(min=4, max=50), validators.DataRequired()]
     )
+    
+class AccountForm(FlaskForm):
+    name = StringField(
+        "Name", [validators.Length(min=4, max=50), validators.DataRequired()]
+    )

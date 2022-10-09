@@ -1,6 +1,6 @@
 from flask import Blueprint, redirect, url_for, render_template, flash
 from apps.auth.models import User
-from apps.auth.forms import LoginForm, RegisterForm
+from apps.auth.forms import LoginForm, RegisterForm, AccountForm
 from extensions import db, login_manager
 from flask_login import login_user, login_required, current_user, logout_user
 
@@ -11,7 +11,7 @@ auth_blueprint = Blueprint('auth', __name__, template_folder="templates")
 @auth_blueprint.route('/login', methods=["GET", "POST"])
 def login():    
     if current_user.is_authenticated:
-        return redirect(url_for("dashboard.index"))
+        return redirect(url_for("lottery.index"))
     
     form = LoginForm()
     
@@ -24,7 +24,7 @@ def login():
                 db.session.add(user)
                 db.session.commit()
                 login_user(user, remember=True)
-                return redirect(url_for("dashboard.index"))
+                return redirect(url_for("lottery.index"))
         
         
         flash("Credentials not match!", "danger")
@@ -72,6 +72,23 @@ def logout():
     logout_user()
     return redirect(url_for("auth.login"))
 
+@auth_blueprint.route('/account', methods=["GET", "POST"])
+@login_required
+def account():
+    user = current_user
+    form = AccountForm(obj=current_user)
+
+    if form.validate_on_submit():
+        try:
+            user.name = form.name.data
+            db.session.commit()
+
+            flash("Data Akun berhasil diubah!", "success")
+        except Exception as error:
+            flash("Terjadi kesalahan saat mengubah data!, error : %s" % error, "danger")
+
+    return render_template("account.html", form=form)
+    
 @login_manager.user_loader
 def user_loader(user_id):   
     return User.query.get(user_id)

@@ -5,16 +5,22 @@
         </div>
 
         <ul class="header-menus">                
-           {% if admin_page %}
+           {% if current_user.is_authenticated %}
                 <li>
-                    <a href="{{ url_for('dashboard.index') }}">Dashboard</a>
+                    <a href="{{ url_for('lottery.index') }}">Dashboard Admin</a>
+                </li>                
+                <li>
+                    <a href="{{ url_for('lottery.create') }}">Buat Undian</a>                    
                 </li>
                 <li>
-                    <a href="{{ url_for('lottery.create') }}">Buat Undian</a>
+                    <a href="{{ url_for('auth.account') }}">Pengaturan Akun</a>                    
+                </li>
+                <li>
+                    <a href="{{ url_for('auth.logout') }}">Logout</a>
                 </li>
             {% else %}
                 <li>
-                    <a href="{{ url_for('lottery.index') }}">Halaman Undian</a>
+                    <a href="{{ url_for('auth.login') }}">Login</a>
                 </li>
             {% endif %}       
         </ul>
