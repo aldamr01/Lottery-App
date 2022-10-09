@@ -70,7 +70,7 @@ def logout():
     db.session.add(user)
     db.session.commit()
     logout_user()
-    return redirect(url_for("auth.login"))
+    return redirect(url_for("dashboard.index"))
 
 @auth_blueprint.route('/account', methods=["GET", "POST"])
 @login_required
