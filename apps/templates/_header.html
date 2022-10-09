@@ -4,11 +4,8 @@
             <p class="logo-text">Lottery App</p>
         </div>
 
-        <ul class="header-menus">
-            
-
-            
-            {% if admin_page %}
+        <ul class="header-menus">                
+           {% if admin_page %}
                 <li>
                     <a href="{{ url_for('dashboard.index') }}">Dashboard</a>
                 </li>
@@ -19,7 +16,7 @@
                 <li>
                     <a href="{{ url_for('lottery.index') }}">Halaman Undian</a>
                 </li>
-            {% endif %}                
+            {% endif %}       
         </ul>
     </div>
 </header>

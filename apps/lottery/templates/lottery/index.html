@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %} Halaman Utama {% endblock %}
+{% block title %} Halaman Lottery {% endblock %}
 
 {% block content %} 
 	<section id="content">
@@ -19,7 +19,15 @@
 		})
 	</script>
 
-	{% include 'lottery/_script-delete.html' %}
+	<script>
+		function setDeleteForm(name, id) {
+			idElement = document.getElementById('lotteryId');
+			nameElement = document.getElementById('lotteryName');
+
+			idElement.value = id;
+			nameElement.innerHTML = name;
+		}
+	</script>
 {% endblock %}
 
 

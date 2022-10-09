@@ -10,9 +10,10 @@ class Lottery(db.Model):
     name = db.Column(db.String(255), nullable=False)
     description = db.Column(db.Text, nullable=False)
     max_participant = db.Column(db.Integer, nullable=False)
+    created_at = db.Column(db.DateTime, default=datetime.utcnow())
     updated_at = db.Column(
         db.DateTime, default=datetime.utcnow(), onupdate=datetime.utcnow()
-    )
+    )    
 
     participants = db.relationship("LotteryParticipants", backref="lottery", lazy=True)
 
@@ -26,6 +27,7 @@ class LotteryParticipants(db.Model):
     fullname = db.Column(db.String(255), nullable=False)
     email = db.Column(db.String(100), nullable=False)
     address = db.Column(db.Text(), nullable=False)
+    created_at = db.Column(db.DateTime, default=datetime.utcnow())
     updated_at = db.Column(
         db.DateTime, default=datetime.utcnow(), onupdate=datetime.utcnow()
     )

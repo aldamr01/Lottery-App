@@ -59,27 +59,6 @@ li {
     margin: 0;
 }
 
-.text-left {
-    text-align: left;
-}
-
-.text-right {
-    text-align: right;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.table-container {
-    margin-top: 50px;
-}
-
-.btn {
-    border: none !important;
-    border-radius: 0 !important;
-}
-
 .header {
     position: relative;
     top: 0;
@@ -96,15 +75,84 @@ li {
     margin-top: 8px;
 }
 
-/* Container */
-.promo-container {
+.logo-text {
+    font-weight: 600;
+    color: #F8F8F8;
+    font-size: 13pt;
+}
+
+.header-menus {
+    padding-right: 20px;
+    margin-top: 8px;
+    float: right;
+}
+
+.header-menus li {
+    float: left;
+    font-size: 13pt;
+    color: #ffffff;
+    padding-left: 15px;
+}
+
+.header-menus a {
+    float: left;
+    font-size: 13pt;
+    font-weight: 300;
+    color: #ffffff;
+}
+
+.header-menus a:hover {
+    float: left;
+    font-size: 13pt;
+    font-weight: 300;
+    color: #c4c0c0;
+    text-decoration: none;
+}
+
+.divider-white {
+    width: 100%;
+    background: #ffffff;
+    height: 50px;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-login {
+    color: #2b546a;
+}
+
+.table-container {
+    margin-top: 50px;
+}
+
+.btn {
+    border: none;
+    border-radius: 0;
+}
+
+.btn-login {
+    background: #2b546a;
+    color: #ffffff;
+}
+
+.base-container {
     overflow-x: hidden;
     min-height: 100%;
     margin-bottom: -81px;
     padding-bottom: 100px;
 }
 
-.slider-container {
+.banner-container {
     width: 100%;
     height: 240px;
     margin-left: auto;
@@ -115,14 +163,14 @@ li {
     margin-bottom: 0;
 }
 
-.slider-wrapper,
-.slider-slide,
+.banner-wrapper,
+.banner-slide,
 .slick-list,
 .slick-track {
     height: 100%;
 }
 
-.slider-image {
+.banner-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -157,9 +205,9 @@ li {
 }
 
 .promotion-box p {
-    height: 50px;
+    height: 40px;
     overflow: hidden;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .promotion-date {
@@ -183,14 +231,14 @@ li {
     color: rgba(0, 0, 0, 0.54);
 }
 
+.text-description {
+    font-size : 12px;    
+}
+
 .promotion-box__value {
     font-size: 13px;
     line-height: 13px;
 }
-
-/* .promotion-date-detail:before {
-    background-image: url(https://ecs7.tokopedia.net/assets/images/ic_periode.png);
-} */
 
 .promotion-code {
     position: relative;
@@ -200,10 +248,6 @@ li {
 .promotion-code-detail {
     display: inline-block;
 }
-
-/* .promotion-code-detail:before {
-    background-image: url(https://ecs7.tokopedia.net/assets/images/ic_kode.png);
-} */
 
 .promotion-date-detail:before,
 .promotion-code-detail:before {
@@ -216,15 +260,6 @@ li {
     transform: translateY(-50%);
     width: 20px;
     height: 20px;
-}
-
-.sticky-code-voucher__text {
-    color: #FF5722;
-    font-weight: 600;
-    border: none;
-    width: 100%;
-    min-width: 160px;
-    padding: 0;
 }
 
 .promotion-cta {
@@ -292,42 +327,12 @@ li {
     margin-top: 4px;
 }
 
-.logo-text {
-    font-weight: 600;
-    color: #F8F8F8;
-    font-size: 13pt;
+.container #login-row #login-column #login-box {
+    margin-top: 120px;
+    max-width: 600px;
+    height: 320px;    
 }
 
-.divider-white {
-    width: 100%;
-    background: #ffffff;
-    height: 50px;
-}
-
-.header-menus {
-    padding-right: 20px;
-    margin-top: 8px;
-    float: right;
-}
-
-.header-menus li {
-    float: left;
-    font-size: 13pt;
-    color: #ffffff;
-    padding-left: 15px;
-}
-
-.header-menus a {
-    float: left;
-    font-size: 13pt;
-    font-weight: 300;
-    color: #ffffff;
-}
-
-.header-menus a:hover {
-    float: left;
-    font-size: 13pt;
-    font-weight: 300;
-    color: #c4c0c0;
-    text-decoration: none;
+.container #login-row #login-column #login-box #login-form #register-link {
+    margin-top: -55px;
 }

@@ -4,7 +4,7 @@ from wtforms import StringField, validators, TextAreaField, IntegerField
 
 class LotteryForm(FlaskForm):
     name = StringField(
-        "Nama Undian", [validators.Length(min=4, max=50), validators.DataRequired()]
+        "Nama Undian", [validators.Length(min=4, max=50)]
     )
     description = TextAreaField(
         "Deskripsi Undian",

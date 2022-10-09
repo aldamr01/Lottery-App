@@ -1,9 +1,10 @@
-from flask import Blueprint, request, flash, redirect, url_for
-from flask import render_template
+from flask import Blueprint, request, flash, redirect, url_for, render_template
 
 from extensions import db
 from apps.lottery.models import Lottery
 from apps.lottery.forms import LotteryForm
+from flask_login import login_required
+
 
 lottery_blueprint = Blueprint(
     "lottery", __name__, template_folder="templates", url_prefix="/lottery"
@@ -11,6 +12,7 @@ lottery_blueprint = Blueprint(
 
 
 @lottery_blueprint.route("/", methods=["GET"])
+@login_required
 def index():
     lotteries = Lottery.query.all()
 
@@ -18,6 +20,7 @@ def index():
 
 
 @lottery_blueprint.route("/create", methods=["GET"])
+@login_required
 def create():
     form = LotteryForm()
 
@@ -25,6 +28,7 @@ def create():
 
 
 @lottery_blueprint.route("/store", methods=["POST"])
+@login_required
 def store():
     form = LotteryForm(request.form)
 
@@ -51,7 +55,8 @@ def store():
     return redirect(url_for("lottery.create"))
 
 
-@lottery_blueprint.route("/edit/<int:id>/edit", methods=["GET"])
+@lottery_blueprint.route("/edit/<int:id>", methods=["GET"])
+@login_required
 def edit(id):
     lottery = Lottery.query.get(id)
 
@@ -60,7 +65,8 @@ def edit(id):
     return render_template("lottery/edit.html", admin_page=True, form=form, id=id)
 
 
-@lottery_blueprint.route("/edit/<int:id>/update", methods=["POST"])
+@lottery_blueprint.route("/update/<int:id>", methods=["POST"])
+@login_required
 def update(id):
     form = LotteryForm(request.form)
 
@@ -87,6 +93,7 @@ def update(id):
 
 
 @lottery_blueprint.route("/delete", methods=["POST"])
+@login_required
 def delete():
     id = request.form["id"]
     lottery = Lottery.query.get(id)

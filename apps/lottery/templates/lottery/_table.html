@@ -1,6 +1,14 @@
 <div class="table-responsive table-container">		
     <table class="table table-hover bg-white">
-        {% include 'lottery/_table-head.html' %}
+        <thead class="thead-light bg-info">
+            <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nama Undian</th>
+            <th scope="col">Maksimal Peserta</th>
+            <th scope="col">Deskripsi</th>
+            <th scope="col">Aksi</th>
+            </tr>
+        </thead>
 
         <tbody>    
             {% for lottery in lotteries %}
